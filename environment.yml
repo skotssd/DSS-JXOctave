@@ -4,9 +4,9 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   # Xeus-Octave
-  - cmake
-  - make
-  - pkg-config
+  #- cmake
+  #- make
+  #- pkg-config
   - emscripten_emscripten-wasm32==3.1.73
   # JupyterLite
   - jupyterlite-core
