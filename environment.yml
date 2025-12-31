@@ -1,11 +1,11 @@
 name: xeus-kernels
 channels:
   - https://repo.prefix.dev/emscripten-forge-dev
-  - https://repo.prefix.dev/conda-forge
+  - conda-forge
 dependencies:
   # xeus-python
-  - xeus-python
-  - ipycanvas
+  #- xeus-python
+  #- ipycanvas
   # other packages including octave
   - xeus
   - xeus-lite
@@ -20,5 +20,5 @@ dependencies:
   - liblapack
   - freetype
   - plotly
-  # R and coursekata
-  - xeus-r
+  # R package
+  #- xeus-r
