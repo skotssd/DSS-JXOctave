@@ -21,4 +21,4 @@ dependencies:
   - liblapack
   - freetype
   - plotly
-  - oct2py
+#  - oct2py
