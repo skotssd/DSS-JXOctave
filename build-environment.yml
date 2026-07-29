@@ -10,3 +10,4 @@ dependencies:
   - jupyterlite-core >=0.8.0,<0.9.0
   - jupyterlite-xeus
   - notebook
+  - xeus-octave

@@ -30,17 +30,8 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Prepare asset folder
-          mkdir -p content
-          cp README.md content/
-
-          # 2. Build the static site passing the micromamba active directory
-          # (MAMBA_ROOT_PREFIX/envs/build-env contains your downloaded xeus-octave packages)
-          jupyter lite build \
-            --base-url /skotssd/DSS-JXOctave/ \
-            --contents content \
-            --output-dir dist \
-            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/build-env"
+          cp README.md content
+          jupyter lite build --base-url /skotssd/DSS-JXOctave/ --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
