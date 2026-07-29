@@ -4,6 +4,7 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   - xeus-octave
+  - jupyterlite-xeus
   - plotly
   - nlohmann_json
   - nlohmann_json-abi
