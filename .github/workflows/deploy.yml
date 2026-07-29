@@ -28,7 +28,7 @@ jobs:
           cache-environment: true
 
       - name: Build the JupyterLite site
-        shell: bash -l {0}
+        shell: bash
         run: |
           cp README.md content
           jupyter lite build --base-url /skotssd/DSS-JXOctave/ --contents content --output-dir dist
