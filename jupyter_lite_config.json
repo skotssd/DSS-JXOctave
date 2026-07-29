@@ -1,0 +1,8 @@
+json
+
+{
+  "LiteBuildConfig": {
+    "base_url": "/skotssd/DSS-JXOctave/",
+    "output_dir": "dist"
+  }
+}
