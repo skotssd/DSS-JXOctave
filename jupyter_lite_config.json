@@ -8,6 +8,12 @@
         "mimeTypes": ["text/x-octave"],
         "extensions": [".m"],
         "iconLabel": "octave"
+            "XeusAddon": {
+      "default_channels": [
+        "https://prefix.dev",
+        "https://prefix.dev"
+      ]
+    }
    }
    }
  }

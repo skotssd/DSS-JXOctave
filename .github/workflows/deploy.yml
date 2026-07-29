@@ -30,13 +30,13 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Prepare asset folder
+          # 1. Prepare your assets folder structure
           mkdir -p content
           cp README.md content/
 
-          # 2. Build the static site passing the micromamba active directory
-          # (MAMBA_ROOT_PREFIX/envs/build-env contains your downloaded xeus-octave packages)
+          # 2. Build pointing to the local config override file
           jupyter lite build \
+            --config=jupyter_lite_config.json \
             --base-url /skotssd/DSS-JXOctave/ \
             --contents content \
             --output-dir dist \
