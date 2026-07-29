@@ -30,22 +30,17 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Prepare your local context assets
+          # 1. Setup local context structures
           mkdir -p content
           cp README.md content/
 
-          # 2. Create a separate, isolated WebAssembly guest environment
-          micromamba create -y -n emscripten-env --platform=emscripten-wasm32 \
-            -c https://prefix.dev \
-            -c conda-forge \
-            xeus-octave
-
-          # 3. Compile the site passing the clean Wasm guest environment path
+          # 2. Force install xeus-octave into target build layer
+          # This forces JupyterLite to build a separate virtual space internally
           jupyter lite build \
             --base-url /skotssd/DSS-JXOctave/ \
             --contents content \
             --output-dir dist \
-            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/emscripten-env" \
+            --XeusAddon.packages="xeus-octave" \
             --XeusAddon.default_channels="https://prefix.dev" \
             --XeusAddon.default_channels="https://prefix.dev"
 

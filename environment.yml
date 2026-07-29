@@ -6,9 +6,3 @@ dependencies:
   - xeus-octave
   - jupyterlite-xeus
   - plotly
-  - nlohmann_json
-  - nlohmann_json-abi
-  - libpng
-  - zlib
-  - libflang
-  - freetype
