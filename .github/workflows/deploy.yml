@@ -26,7 +26,7 @@ jobs:
           micromamba-version: '1.5.8-0'
           environment-file: build-environment.yml
           cache-environment: true
-          init-shell: false # <--- Add this line to prevent the post-job cleanup crash
+          init-shell: "none" # <--- Change 'false' to "none"
 
 
       - name: Build the JupyterLite site
