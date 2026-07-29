@@ -1,10 +1,15 @@
 {
-  "LiteBuildApp": {
-    "XeusAddon": {
-      "default_channels": [
-        "https://prefix.dev",
-        "https://prefix.dev"
-      ]
-    }
-  }
+  "LiteBuildConfig": {
+    "base_url": "/skotssd/DSS-JXOctave/",
+    "output_dir": "dist",
+    "extra_file_types": {
+    "octave": {
+        "name": "octave",
+        "mimeTypes": ["text/x-octave"],
+        "extensions": [".m"],
+        "iconLabel": "octave"
+
+   }
+   }
+ }
 }

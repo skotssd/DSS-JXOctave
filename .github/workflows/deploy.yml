@@ -26,26 +26,12 @@ jobs:
           micromamba-version: '1.5.8-0'
           environment-file: build-environment.yml
           cache-environment: true
-          init-shell: "none" # <--- Change 'false' to "none"
-
 
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Setup local context structures
-          mkdir -p content
-          cp README.md content/
-
-          # 2. Force install xeus-octave into target build layer
-          # This forces JupyterLite to build a separate virtual space internally
-          jupyter lite build \
-            --base-url /skotssd/DSS-JXOctave/ \
-            --contents content \
-            --output-dir dist \
-            --XeusAddon.packages="xeus-octave" \
-            --XeusAddon.default_channels="https://prefix.dev" \
-            --XeusAddon.default_channels="https://prefix.dev"
-
+          cp README.md content
+          jupyter lite build --base-url /skotssd/DSS-JXOctave/ --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
