@@ -30,18 +30,25 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Prepare your asset directories
+          # 1. Prepare your local context assets
           mkdir -p content
           cp README.md content/
 
-          # 2. Build passing configuration overrides directly via command flags
+          # 2. Create a separate, isolated WebAssembly guest environment
+          micromamba create -y -n emscripten-env --platform=emscripten-wasm32 \
+            -c https://prefix.dev \
+            -c conda-forge \
+            xeus-octave
+
+          # 3. Compile the site passing the clean Wasm guest environment path
           jupyter lite build \
             --base-url /skotssd/DSS-JXOctave/ \
             --contents content \
             --output-dir dist \
-            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/build-env" \
+            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/emscripten-env" \
             --XeusAddon.default_channels="https://prefix.dev" \
             --XeusAddon.default_channels="https://prefix.dev"
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
