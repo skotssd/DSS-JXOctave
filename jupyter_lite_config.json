@@ -1,8 +1,14 @@
-json
-
 {
   "LiteBuildConfig": {
     "base_url": "/skotssd/DSS-JXOctave/",
-    "output_dir": "dist"
-  }
+    "output_dir": "dist",
+    "extra_file_types": {
+    "octave": {
+        "name": "octave",
+        "mimeTypes": ["text/x-octave"],
+        "extensions": [".m"],
+        "iconLabel": "octave"
+   }
+   }
+ }
 }
