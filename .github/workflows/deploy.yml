@@ -28,10 +28,10 @@ jobs:
           cache-environment: true
 
       - name: Build the JupyterLite site
-        shell: bash
+        shell: bash -l {0}
         run: |
           cp README.md content
-          jupyter lite build --base-url /skotssd/DSS-JXOctave/ --contents content --output-dir dist
+          jupyter lite build --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
