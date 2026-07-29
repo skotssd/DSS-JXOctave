@@ -8,3 +8,4 @@ dependencies:
   - jupyter_server
   - jupyterlite-core
   - jupyterlite-xeus
+  - notebook

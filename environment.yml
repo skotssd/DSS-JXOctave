@@ -4,3 +4,10 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   - xeus-octave
+  - plotly
+  - nlohmann_json
+  - nlohmann_json-abi
+  - libpng
+  - zlib
+  - libflang
+  - freetype
