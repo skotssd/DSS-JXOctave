@@ -1,0 +1,10 @@
+{
+  "LiteBuildApp": {
+    "XeusAddon": {
+      "default_channels": [
+        "https://prefix.dev",
+        "https://prefix.dev"
+      ]
+    }
+  }
+}

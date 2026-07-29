@@ -30,17 +30,18 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          # 1. Prepare your assets folder structure
+          # 1. Prepare your asset directories
           mkdir -p content
           cp README.md content/
 
-          # 2. Build pointing to the local config override file
+          # 2. Build passing configuration overrides directly via command flags
           jupyter lite build \
-            --config=jupyter_lite_config.json \
             --base-url /skotssd/DSS-JXOctave/ \
             --contents content \
             --output-dir dist \
-            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/build-env"
+            --XeusAddon.prefix="$MAMBA_ROOT_PREFIX/envs/build-env" \
+            --XeusAddon.default_channels="https://prefix.dev" \
+            --XeusAddon.default_channels="https://prefix.dev"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
