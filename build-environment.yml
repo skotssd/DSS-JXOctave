@@ -4,6 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - python >=3.10
+  - nodejs
   - pip
   - jupyter_server
   - jupyterlite-core >=0.8.0,<0.9.0
