@@ -15,3 +15,5 @@ dependencies:
   - jupyterlab-night
   # JupyterLab: Miami nights theme (optional)
   - jupyterlab_miami_nights
+    # Python: ipycanvas library for Jupyter notebooks (optional)
+  - ipycanvas>=0.9.1
