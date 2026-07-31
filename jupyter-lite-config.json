@@ -12,6 +12,7 @@
     }
   },
   "jupyter-config-data": {
+    "enableMemoryStorage": true,
     "contentsStorageDrivers": ["MemoryStorage"],
     "workspacesStorageDrivers": ["MemoryStorage"],
     "settingsStorageDrivers": ["MemoryStorage"]
