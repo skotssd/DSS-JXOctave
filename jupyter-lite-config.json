@@ -12,9 +12,13 @@
     }
   },
   "jupyter-config-data": {
-    "enableMemoryStorage": true,
-    "contentsStorageDrivers": ["MemoryStorage"],
-    "workspacesStorageDrivers": ["MemoryStorage"],
-    "settingsStorageDrivers": ["MemoryStorage"]
+    "settings_overrides": [
+      {
+        "id": "@jupyterlite/contents-extension:contents",
+        "contentsStorageDrivers": ["memoryStorageDriver"],
+        "settingsStorageDrivers": ["memoryStorageDriver"],
+        "workspacesStorageDrivers": ["memoryStorageDriver"]
+      }
+    ]
   }
 }

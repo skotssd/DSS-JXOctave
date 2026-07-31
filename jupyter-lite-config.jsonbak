@@ -3,13 +3,18 @@
     "base_url": "/skotssd/DSS-JXOctave/",
     "output_dir": "dist",
     "extra_file_types": {
-    "octave": {
+      "octave": {
         "name": "octave",
         "mimeTypes": ["text/x-octave"],
         "extensions": [".m"],
         "iconLabel": "octave"
-
-   }
-   }
- }
+      }
+    }
+  },
+  "jupyter-config-data": {
+    "enableMemoryStorage": true,
+    "contentsStorageDrivers": ["MemoryStorage"],
+    "workspacesStorageDrivers": ["MemoryStorage"],
+    "settingsStorageDrivers": ["MemoryStorage"]
+  }
 }
