@@ -1,0 +1,26 @@
+{% extends "manifest:index.html" %}
+
+{% block body %}
+{{ super() }}
+<script>
+  (function() {
+    const dbName = 'JupyterLite Storage';
+    const req = indexedDB.deleteDatabase(dbName);
+
+    req.onsuccess = function () {
+        console.log("JupyterLite storage cleared successfully.");
+    };
+
+    req.onerror = function () {
+        console.error("Couldn't delete JupyterLite storage.");
+    };
+
+    req.onblocked = function () {
+        console.warn("Storage deletion blocked. Close other tabs running this app.");
+    };
+
+    localStorage.clear();
+    sessionStorage.clear();
+  })();
+</script>
+{% endblock %}
