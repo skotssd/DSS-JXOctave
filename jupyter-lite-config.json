@@ -10,15 +10,6 @@
         "iconLabel": "octave"
       }
     }
-  },
-  "jupyter-config-data": {
-    "settings_overrides": [
-      {
-        "id": "@jupyterlite/contents-extension:contents",
-        "contentsStorageDrivers": ["memoryStorageDriver"],
-        "settingsStorageDrivers": ["memoryStorageDriver"],
-        "workspacesStorageDrivers": ["memoryStorageDriver"]
-      }
-    ]
   }
 }
+
