@@ -4,6 +4,7 @@
     "enableMemoryStorage": true,
     "contentsStorageDrivers": ["memoryStorageDriver"],
     "workspacesStorageDrivers": ["memoryStorageDriver"],
-    "settingsStorageDrivers": ["memoryStorageDriver"]
+    "settingsStorageDrivers": ["memoryStorageDriver"],
+    "terminalsAvailable": true
   }
 }

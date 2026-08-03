@@ -11,6 +11,7 @@ dependencies:
   - jupyter_server
   - jupyterlite-core
   - jupyterlite-xeus
+  - jupyterlite-terminal
   # JupyterLab: dark theme
   - jupyterlab-night
   # JupyterLab: Miami nights theme (optional)
